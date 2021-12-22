@@ -1046,12 +1046,6 @@
 					<key>name</key>
 					<string>storage.type.tag-handle.miniyaml</string>
 				</dict>
-				<dict>
-					<key>match</key>
-					<string>\S+</string>
-					<key>name</key>
-					<string>invalid.illegal.tag-handle.miniyaml</string>
-				</dict>
 			</array>
 		</dict>
 		<key>prototype</key>
