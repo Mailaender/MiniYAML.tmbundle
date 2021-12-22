@@ -684,30 +684,15 @@
 							<key>name</key>
 							<string>constant.language.boolean.miniyaml</string>
 						</dict>
-						<key>3</key>
+						<key>2</key>
 						<dict>
 							<key>name</key>
 							<string>constant.numeric.integer.miniyaml</string>
 						</dict>
-						<key>4</key>
+						<key>3</key>
 						<dict>
 							<key>name</key>
 							<string>constant.numeric.float.miniyaml</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>constant.other.timestamp.miniyaml</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>constant.language.value.miniyaml</string>
-						</dict>
-						<key>7</key>
-						<dict>
-							<key>name</key>
-							<string>constant.language.merge.miniyaml</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -716,48 +701,14 @@
                             (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
-                                      [-+]? 0b [0-1_]+ # (base 2)
-                                    | [-+]? 0  [0-7_]+ # (base 8)
-                                    | [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
-                                    | [-+]? 0x [0-9a-fA-F_]+ # (base 16)
-                                    | [-+]? [1-9] [0-9_]* (?: :[0-5]?[0-9])+ # (base 60)
+                                    [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
                                 )
                               )
                             | (
                                 (?x:
-                                      [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
-                                    | [-+]? [0-9] [0-9_]* (?: :[0-5]?[0-9])+ \. [0-9_]* # (base 60)
-                                    | [-+]? \. (?: inf|Inf|INF) # (infinity)
-                                    |       \. (?: nan|NaN|NAN) # (not a number)
+                                    [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
                                 )
                               )
-                            | (
-                                (?x:
-                                    \d{4} - \d{2} - \d{2}           # (y-m-d)
-                                  | \d{4}                           # (year)
-                                    - \d{1,2}                       # (month)
-                                    - \d{1,2}                       # (day)
-                                    (?: [Tt] | [ \t]+) \d{1,2}      # (hour)
-                                    : \d{2}                         # (minute)
-                                    : \d{2}                         # (second)
-                                    (?: \.\d*)?                     # (fraction)
-                                    (?:
-                                          (?:[ \t]*) Z
-                                        | [-+] \d{1,2} (?: :\d{1,2})?
-                                    )?                              # (time zone)
-                                )
-                              )
-                            | (=)
-                            | (&lt;&lt;)
-                        )
-                        (?:
-                            (?=
-                                  \s* $
-                                | \s+ \#
-                                | \s* : (\s|$)
-                                | \s* : [\[\]{},]
-                                | \s* [\[\]{},]
-                            )
                         )
                     </string>
 				</dict>
@@ -800,37 +751,17 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>constant.language.null.miniyaml</string>
+							<string>constant.language.boolean.miniyaml</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>constant.language.boolean.miniyaml</string>
+							<string>constant.numeric.integer.miniyaml</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>constant.numeric.integer.miniyaml</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
 							<string>constant.numeric.float.miniyaml</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>constant.other.timestamp.miniyaml</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>constant.language.value.miniyaml</string>
-						</dict>
-						<key>7</key>
-						<dict>
-							<key>name</key>
-							<string>constant.language.merge.miniyaml</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -839,39 +770,14 @@
                             | (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
-                                      [-+]? 0b [0-1_]+ # (base 2)
-                                    | [-+]? 0  [0-7_]+ # (base 8)
                                     | [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
-                                    | [-+]? 0x [0-9a-fA-F_]+ # (base 16)
-                                    | [-+]? [1-9] [0-9_]* (?: :[0-5]?[0-9])+ # (base 60)
                                 )
                               )
                             | (
                                 (?x:
                                       [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
-                                    | [-+]? [0-9] [0-9_]* (?: :[0-5]?[0-9])+ \. [0-9_]* # (base 60)
-                                    | [-+]? \. (?: inf|Inf|INF) # (infinity)
-                                    |       \. (?: nan|NaN|NAN) # (not a number)
                                 )
                               )
-                            | (
-                                (?x:
-                                    \d{4} - \d{2} - \d{2}           # (y-m-d)
-                                  | \d{4}                           # (year)
-                                    - \d{1,2}                       # (month)
-                                    - \d{1,2}                       # (day)
-                                    (?: [Tt] | [ \t]+) \d{1,2}      # (hour)
-                                    : \d{2}                         # (minute)
-                                    : \d{2}                         # (second)
-                                    (?: \.\d*)?                     # (fraction)
-                                    (?:
-                                          (?:[ \t]*) Z
-                                        | [-+] \d{1,2} (?: :\d{1,2})?
-                                    )?                              # (time zone)
-                                )
-                              )
-                            | (=)
-                            | (&lt;&lt;)
                         )
                         (?x:
                             (?=
