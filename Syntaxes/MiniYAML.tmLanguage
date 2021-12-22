@@ -682,11 +682,6 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>constant.language.null.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
 							<string>constant.language.boolean.miniyaml</string>
 						</dict>
 						<key>3</key>
@@ -718,8 +713,7 @@
 					<key>match</key>
 					<string>(?x)
                         (?x:
-                              (null|Null|NULL|~)
-                            | (y|Y|yes|Yes|YES|n|N|no|No|NO|true|True|TRUE|false|False|FALSE|on|On|ON|off|Off|OFF)
+                            (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
                                       [-+]? 0b [0-1_]+ # (base 2)
@@ -842,8 +836,7 @@
 					<key>match</key>
 					<string>(?x)
                         (?x:
-                              (null|Null|NULL|~)
-                            | (y|Y|yes|Yes|YES|n|N|no|No|NO|true|True|TRUE|false|False|FALSE|on|On|ON|off|Off|OFF)
+                            | (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
                                       [-+]? 0b [0-1_]+ # (base 2)
