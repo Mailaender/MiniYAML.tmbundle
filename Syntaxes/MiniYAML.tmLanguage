@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>yaml</string>
+	</array>
+	<key>name</key>
+	<string>MiniYAML</string>
+	<key>scopeName</key>
+	<string>source.miniyaml</string>
+	<key>uuid</key>
+	<string>DAA404CB-656F-4D24-AA2B-E4D5EAB984D4</string>
+</dict>
+</plist>
