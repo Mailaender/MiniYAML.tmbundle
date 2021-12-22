@@ -253,23 +253,6 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.directive.miniyaml.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>constant.numeric.miniyaml-version.miniyaml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>\G(YAML)[ \t]+(\d+\.\d+)</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
 							<string>keyword.other.directive.tag.miniyaml</string>
 						</dict>
 						<key>2</key>
