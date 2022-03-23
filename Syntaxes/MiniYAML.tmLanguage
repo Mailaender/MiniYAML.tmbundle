@@ -198,7 +198,7 @@
 		<key>comment</key>
 		<dict>
 			<key>begin</key>
-			<string>(?:(^[ \t]*)|[ \t]+)(?=#\p{Print}*$)</string>
+			<string>(?:(^[ \t]*)|[ \t]+)(?=#(\p{Print}|\t)*$)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
