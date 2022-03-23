@@ -16,10 +16,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#property</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#directive</string>
 		</dict>
 		<dict>
@@ -884,59 +880,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>property</key>
-		<dict>
-			<key>begin</key>
-			<string>(?=!|&amp;)</string>
-			<key>end</key>
-			<string>(?!\G)</string>
-			<key>name</key>
-			<string>meta.property.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.control.property.anchor.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.anchor.miniyaml</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.anchor.miniyaml</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>invalid.illegal.character.anchor.miniyaml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>\G((&amp;))([^\s\[\]/{/},]+)(\S+)?</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(?x)
-                        \G
-                        (?:
-                            ! &lt; (?: %[0-9A-Fa-f]{2} | [0-9A-Za-z\-#;/?:@&amp;=+$,_.!~*'()\[\]] )+ &gt;
-                          | (?:!(?:[0-9A-Za-z\-]*!)?) (?: %[0-9A-Fa-f]{2} | [0-9A-Za-z\-#;/?:@&amp;=+$_.~*'()] )+
-                          | !
-                        )
-                        (?=\ |\t|$)
-                    </string>
-					<key>name</key>
-					<string>storage.type.tag-handle.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
 		<key>prototype</key>
 		<dict>
 			<key>patterns</key>
@@ -944,10 +887,6 @@
 				<dict>
 					<key>include</key>
 					<string>#comment</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#property</string>
 				</dict>
 			</array>
 		</dict>
