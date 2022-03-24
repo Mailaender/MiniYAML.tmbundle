@@ -177,24 +177,17 @@
 					<key>match</key>
 					<string>(?x)
                         (?x:
-                            | (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
+                            (true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
-                                    | [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
+                                    [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
                                 )
                               )
                             | (
                                 (?x:
-                                      [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
+                                    [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
                                 )
                               )
-                        )
-                        (?x:
-                            (?=
-                                  \s* $
-                                | \s+ \#
-                                | \s* : (\s|$)
-                            )
                         )
                     </string>
 				</dict>
