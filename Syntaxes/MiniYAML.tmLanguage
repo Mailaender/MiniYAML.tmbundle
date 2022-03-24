@@ -330,13 +330,6 @@
 							</dict>
 							<key>end</key>
 							<string>(?=[},\]])</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>#flow-value</string>
-								</dict>
-							</array>
 						</dict>
 					</array>
 				</dict>
@@ -426,13 +419,6 @@
 					<string>(?=[},\]])</string>
 					<key>name</key>
 					<string>meta.flow-pair.miniyaml</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#flow-value</string>
-						</dict>
-					</array>
 				</dict>
 			</array>
 		</dict>
@@ -718,27 +704,6 @@
 				<dict>
 					<key>include</key>
 					<string>#flow-node</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-value</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\G(?![},\]])</string>
-					<key>end</key>
-					<string>(?=[},\]])</string>
-					<key>name</key>
-					<string>meta.flow-pair.value.miniyaml</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#flow-node</string>
-						</dict>
-					</array>
 				</dict>
 			</array>
 		</dict>
