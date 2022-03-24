@@ -27,10 +27,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#block-sequence</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#block-mapping</string>
 				</dict>
 			</array>
@@ -179,13 +175,6 @@
 					<string>punctuation.separator.key-value.mapping.miniyaml</string>
 				</dict>
 			</array>
-		</dict>
-		<key>block-sequence</key>
-		<dict>
-			<key>match</key>
-			<string>(-)(?!\S)</string>
-			<key>name</key>
-			<string>punctuation.definition.block.sequence.item.miniyaml</string>
 		</dict>
 		<key>comment</key>
 		<dict>
