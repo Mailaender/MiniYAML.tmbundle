@@ -47,10 +47,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#prototype</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#block-scalar</string>
 				</dict>
 				<dict>
@@ -214,10 +210,6 @@
 		<dict>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#prototype</string>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>#flow-scalar</string>
@@ -470,16 +462,6 @@
 				<dict>
 					<key>include</key>
 					<string>#block-node</string>
-				</dict>
-			</array>
-		</dict>
-		<key>prototype</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#comment</string>
 				</dict>
 			</array>
 		</dict>
