@@ -53,52 +53,12 @@
 					<key>include</key>
 					<string>#flow-scalar-plain-out</string>
 				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-node</string>
-				</dict>
 			</array>
 		</dict>
 		<key>block-pair</key>
 		<dict>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>begin</key>
-					<string>\?</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.key-value.begin.miniyaml</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(?=\?)|^ *(:)|(:)</string>
-					<key>endCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.separator.key-value.mapping.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>invalid.illegal.expected-newline.miniyaml</string>
-						</dict>
-					</dict>
-					<key>name</key>
-					<string>meta.block-mapping.miniyaml</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#block-node</string>
-						</dict>
-					</array>
-				</dict>
 				<dict>
 					<key>begin</key>
 					<string>(?x)
@@ -127,10 +87,6 @@
                     </string>
 					<key>patterns</key>
 					<array>
-						<dict>
-							<key>include</key>
-							<string>#flow-scalar-plain-out-implicit-type</string>
-						</dict>
 						<dict>
 							<key>begin</key>
 							<string>(?x)
@@ -199,97 +155,6 @@
 					<string>\n</string>
 					<key>name</key>
 					<string>comment.line.number-sign.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-node</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#flow-scalar</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-scalar</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#flow-scalar-plain-in</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-scalar-plain-in</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#flow-scalar-plain-in-implicit-type</string>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>(?x)
-                          [^\s[-?:,\[\]{}#&amp;*!|&gt;'"%@`]]
-                        | [?:-] [^\s[\[\]{},]]
-                    </string>
-					<key>end</key>
-					<string>(?x)
-                        (?=
-                              \s* $
-                            | \s+ \#
-                            | \s* : (\s|$)
-                            | \s* : [\[\]{},]
-                            | \s* [\[\]{},]
-                        )
-                    </string>
-					<key>name</key>
-					<string>string.unquoted.plain.in.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-scalar-plain-in-implicit-type</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>constant.language.boolean.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>constant.numeric.integer.miniyaml</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>constant.numeric.float.miniyaml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(?x)
-                        (?x:
-                            (yes|Yes|YES|no|No|NO|true|True|TRUE|false|False|FALSE)
-                            | (
-                                (?:
-                                    [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
-                                )
-                              )
-                            | (
-                                (?x:
-                                    [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
-                                )
-                              )
-                        )
-                    </string>
 				</dict>
 			</array>
 		</dict>
