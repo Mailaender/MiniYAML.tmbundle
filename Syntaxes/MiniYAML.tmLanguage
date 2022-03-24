@@ -16,10 +16,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#directive</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#node</string>
 		</dict>
 	</array>
@@ -222,87 +218,6 @@
 					<string>\n</string>
 					<key>name</key>
 					<string>comment.line.number-sign.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
-		<key>directive</key>
-		<dict>
-			<key>begin</key>
-			<string>^%</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.directive.begin.miniyaml</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>(?=$|[ \t]+($|#))</string>
-			<key>name</key>
-			<string>meta.directive.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.directive.tag.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.tag-handle.miniyaml</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>support.type.tag-prefix.miniyaml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(?x)
-                        \G
-                        (TAG)
-                        (?:[ \t]+
-                            ((?:!(?:[0-9A-Za-z\-]*!)?))
-                            (?:[ \t]+ (
-                                  !              (?x: %[0-9A-Fa-f]{2} | [0-9A-Za-z\-#;/?:@&amp;=+$,_.!~*'()\[\]] )*
-                                | (?![,!\[\]{}]) (?x: %[0-9A-Fa-f]{2} | [0-9A-Za-z\-#;/?:@&amp;=+$,_.!~*'()\[\]] )+
-                                )
-                            )?
-                        )?
-                    </string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>support.other.directive.reserved.miniyaml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>string.unquoted.directive-name.miniyaml</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>string.unquoted.directive-parameter.miniyaml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(?x) \G (\w+) (?:[ \t]+ (\w+) (?:[ \t]+ (\w+))? )?</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\S+</string>
-					<key>name</key>
-					<string>invalid.illegal.unrecognized.miniyaml</string>
 				</dict>
 			</array>
 		</dict>
