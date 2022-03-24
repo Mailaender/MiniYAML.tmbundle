@@ -47,10 +47,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#block-scalar</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#block-collection</string>
 				</dict>
 				<dict>
@@ -222,55 +218,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#flow-scalar-double-quoted</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-scalar-single-quoted</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#flow-scalar-plain-in</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-scalar-double-quoted</key>
-		<dict>
-			<key>begin</key>
-			<string>"</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.miniyaml</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>"</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.miniyaml</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.double.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\([0abtnvfre "/\\N_Lp]|x\d\d|u\d{4}|U\d{8})</string>
-					<key>name</key>
-					<string>constant.character.escape.miniyaml</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\\\n</string>
-					<key>name</key>
-					<string>constant.character.escape.double-quoted.newline.miniyaml</string>
 				</dict>
 			</array>
 		</dict>
@@ -418,40 +366,6 @@
                             )
                         )
                     </string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-scalar-single-quoted</key>
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.miniyaml</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>'(?!')</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.miniyaml</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.single.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>''</string>
-					<key>name</key>
-					<string>constant.character.escape.single-quoted.miniyaml</string>
 				</dict>
 			</array>
 		</dict>
