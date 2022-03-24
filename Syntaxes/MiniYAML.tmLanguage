@@ -210,34 +210,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>flow-alias</key>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.flow.alias.miniyaml</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.alias.miniyaml</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.alias.miniyaml</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.illegal.character.anchor.miniyaml</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>((\*))([^\s\[\]/{/},]+)([^\s\]},]\S*)?</string>
-		</dict>
 		<key>flow-collection</key>
 		<dict>
 			<key>patterns</key>
@@ -301,10 +273,6 @@
 				<dict>
 					<key>include</key>
 					<string>#prototype</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-alias</string>
 				</dict>
 				<dict>
 					<key>include</key>
