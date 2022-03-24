@@ -210,54 +210,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>flow-collection</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#flow-mapping</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-mapping</key>
-		<dict>
-			<key>begin</key>
-			<string>\{</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.mapping.begin.miniyaml</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\}</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.mapping.end.miniyaml</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>meta.flow-mapping.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#prototype</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>,</string>
-					<key>name</key>
-					<string>punctuation.separator.mapping.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
 		<key>flow-node</key>
 		<dict>
 			<key>patterns</key>
@@ -265,10 +217,6 @@
 				<dict>
 					<key>include</key>
 					<string>#prototype</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-collection</string>
 				</dict>
 				<dict>
 					<key>include</key>
