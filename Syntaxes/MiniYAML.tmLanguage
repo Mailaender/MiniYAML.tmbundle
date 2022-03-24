@@ -21,40 +21,6 @@
 	</array>
 	<key>repository</key>
 	<dict>
-		<key>block-collection</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#block-mapping</string>
-				</dict>
-			</array>
-		</dict>
-		<key>block-mapping</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#block-pair</string>
-				</dict>
-			</array>
-		</dict>
-		<key>block-node</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#block-collection</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-scalar-plain-out</string>
-				</dict>
-			</array>
-		</dict>
 		<key>block-pair</key>
 		<dict>
 			<key>patterns</key>
@@ -240,7 +206,11 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#block-node</string>
+					<string>#block-pair</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#flow-scalar-plain-out</string>
 				</dict>
 			</array>
 		</dict>
