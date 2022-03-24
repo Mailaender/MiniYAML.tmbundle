@@ -216,10 +216,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#flow-sequence</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#flow-mapping</string>
 				</dict>
 			</array>
@@ -260,10 +256,6 @@
 					<key>name</key>
 					<string>punctuation.separator.mapping.miniyaml</string>
 				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-pair</string>
-				</dict>
 			</array>
 		</dict>
 		<key>flow-node</key>
@@ -281,144 +273,6 @@
 				<dict>
 					<key>include</key>
 					<string>#flow-scalar</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-pair</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\?</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.key-value.begin.miniyaml</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(?=[},\]])</string>
-					<key>name</key>
-					<string>meta.flow-pair.explicit.miniyaml</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#prototype</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#flow-pair</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#flow-node</string>
-						</dict>
-						<dict>
-							<key>begin</key>
-							<string>:(?=\s|$|[\[\]{},])</string>
-							<key>beginCaptures</key>
-							<dict>
-								<key>0</key>
-								<dict>
-									<key>name</key>
-									<string>punctuation.separator.key-value.mapping.miniyaml</string>
-								</dict>
-							</dict>
-							<key>end</key>
-							<string>(?=[},\]])</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>(?x)
-                        (?=
-                            (?:
-                                [^\s[-?:,\[\]{}#&amp;*!|&gt;'"%@`]]
-                              | [?:-] [^\s[\[\]{},]]
-                            )
-                            (
-                                  [^\s:[\[\]{},]]
-                                | : [^\s[\[\]{},]]
-                                | \s+ (?![#\s])
-                            )*
-                            \s*
-                            :
-							(\s|$)
-                        )
-                    </string>
-					<key>end</key>
-					<string>(?x)
-                        (?=
-                              \s* $
-                            | \s+ \#
-                            | \s* : (\s|$)
-                            | \s* : [\[\]{},]
-                            | \s* [\[\]{},]
-                        )
-                    </string>
-					<key>name</key>
-					<string>meta.flow-pair.key.miniyaml</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#flow-scalar-plain-in-implicit-type</string>
-						</dict>
-						<dict>
-							<key>begin</key>
-							<string>(?x)
-                                  [^\s[-?:,\[\]{}#&amp;*!|&gt;'"%@`]]
-                                | [?:-] [^\s[\[\]{},]]
-                            </string>
-							<key>beginCaptures</key>
-							<dict>
-								<key>0</key>
-								<dict>
-									<key>name</key>
-									<string>entity.name.tag.miniyaml</string>
-								</dict>
-							</dict>
-							<key>contentName</key>
-							<string>entity.name.tag.miniyaml</string>
-							<key>end</key>
-							<string>(?x)
-                                (?=
-                                      \s* $
-                                    | \s+ \#
-                                    | \s* : (\s|$)
-                                    | \s* : [\[\]{},]
-                                    | \s* [\[\]{},]
-                                )
-                            </string>
-							<key>name</key>
-							<string>string.unquoted.plain.in.miniyaml</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-node</string>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>:(?=\s|$|[\[\]{},])</string>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.separator.key-value.mapping.miniyaml</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(?=[},\]])</string>
-					<key>name</key>
-					<string>meta.flow-pair.miniyaml</string>
 				</dict>
 			</array>
 		</dict>
@@ -658,52 +512,6 @@
 					<string>''</string>
 					<key>name</key>
 					<string>constant.character.escape.single-quoted.miniyaml</string>
-				</dict>
-			</array>
-		</dict>
-		<key>flow-sequence</key>
-		<dict>
-			<key>begin</key>
-			<string>\[</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.sequence.begin.miniyaml</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\]</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.sequence.end.miniyaml</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>meta.flow-sequence.miniyaml</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#prototype</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>,</string>
-					<key>name</key>
-					<string>punctuation.separator.sequence.miniyaml</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-pair</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#flow-node</string>
 				</dict>
 			</array>
 		</dict>
