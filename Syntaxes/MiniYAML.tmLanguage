@@ -44,63 +44,10 @@
 					<string>#node-removal</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>(?x)
-                        (?=
-                            (?x:
-                                  [^\s[-?:,\[\]{}#&amp;*!|&gt;'"%@`]]
-                                | [?:-] \S
-                            )
-                            (
-                                  [^\s:]
-                                | : \S
-                                | \s+ (?![#\s])
-                            )*
-                            \s*
-                            :
-							(\s|$)
-                        )
-                    </string>
-					<key>end</key>
-					<string>(?x)
-                        (?=
-                              \s* $
-                            | \s+ \#
-                            | \s* : (\s|$)
-                            | \s* @
-                        )
-                    </string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>begin</key>
-							<string>(?x)
-                                  [^\s[-?:,\[\]{}#&amp;*!|&gt;'"%@`]]
-                                | [?:-] \S
-                            </string>
-							<key>beginCaptures</key>
-							<dict>
-								<key>0</key>
-								<dict>
-									<key>name</key>
-									<string>entity.name.tag.miniyaml</string>
-								</dict>
-							</dict>
-							<key>contentName</key>
-							<string>entity.name.tag.miniyaml</string>
-							<key>end</key>
-							<string>(?x)
-                                (?=
-                                      \s* $
-                                    | \s+ \#
-                                    | \s* : (\s|$)
-                                    | \s* @
-                                )
-                            </string>
-							<key>name</key>
-							<string>string.unquoted.plain.out.miniyaml</string>
-						</dict>
-					</array>
+					<key>match</key>
+					<string>^\s*\S+?(?=@|:)</string>
+					<key>name</key>
+					<string>entity.name.tag.miniyaml</string>
 				</dict>
 				<dict>
 					<key>match</key>
