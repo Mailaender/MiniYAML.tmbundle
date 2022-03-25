@@ -21,6 +21,13 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>node-removal</key>
+		<dict>
+			<key>match</key>
+			<string>^\s+(-.+?)(?=@|:)</string>
+			<key>name</key>
+			<string>keyword.control.miniyaml</string>
+		</dict>
 		<key>node-identifier</key>
 		<dict>
 			<key>match</key>
@@ -32,6 +39,10 @@
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#node-removal</string>
+				</dict>
 				<dict>
 					<key>begin</key>
 					<string>(?x)
