@@ -24,7 +24,7 @@
 		<key>node-removal</key>
 		<dict>
 			<key>match</key>
-			<string>^\s+(-.+?)(?=@|:)</string>
+			<string>^\t+(-.+?)(?=@|:)</string>
 			<key>name</key>
 			<string>keyword.control.miniyaml</string>
 		</dict>
@@ -45,7 +45,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^\s*\S+?(?=@|:)</string>
+					<string>^\t*\S+?(?=@|:)</string>
 					<key>name</key>
 					<string>entity.name.tag.miniyaml</string>
 				</dict>
