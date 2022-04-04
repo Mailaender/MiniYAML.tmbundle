@@ -31,7 +31,7 @@
 		<key>node-identifier</key>
 		<dict>
 			<key>match</key>
-			<string>(?<=\S)(@\S+)(?::\s)</string>
+			<string>(?<=\S)(@\S+)(?=:\s)</string>
 			<key>name</key>
 			<string>entity.name.type.miniyaml</string>
 		</dict>
