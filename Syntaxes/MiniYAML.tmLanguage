@@ -31,7 +31,7 @@
 		<key>node-identifier</key>
 		<dict>
 			<key>match</key>
-			<string>(?<=\S)(@\S+)(?=:\s)</string>
+			<string>(?<=\S)(@\S+)(?=:(?= |$))</string>
 			<key>name</key>
 			<string>entity.name.type.miniyaml</string>
 		</dict>
@@ -45,13 +45,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^\t*\S[^@:]*(?=@|:)</string>
+					<string>^\t*\S[^@:]*(?=@|: |:$)</string>
 					<key>name</key>
 					<string>entity.name.tag.miniyaml</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>:(?=\s|$)</string>
+					<string>:(?= |$)</string>
 					<key>name</key>
 					<string>punctuation.separator.key-value.mapping.miniyaml</string>
 				</dict>
