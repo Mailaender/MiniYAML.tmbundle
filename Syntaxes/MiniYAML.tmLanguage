@@ -45,7 +45,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^\t*\S+?(?=@|:)</string>
+					<string>^\t*\S[^@:]*(?=@|:)</string>
 					<key>name</key>
 					<string>entity.name.tag.miniyaml</string>
 				</dict>
