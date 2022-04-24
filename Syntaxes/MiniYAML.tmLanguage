@@ -157,21 +157,22 @@
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>constant.numeric.integer.miniyaml</string>
+							<string>constant.numeric.float.miniyaml</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>constant.numeric.float.miniyaml</string>
+							<string>constant.numeric.integer.miniyaml</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(?x)
-                        (?x:
+                        (?<=(?:,|:)\ *)
+                        (?:
                             (true|True|TRUE|false|False|FALSE)
                             | (
                                 (?:
-                                    ( [-+]? (?: 0|[1-9][0-9_]*) ) c ( 0|[1-9][0-9_]* ) # (base 10)
+                                    ( [-+]? [0-9]+ ) c ( [0-9]+ )
                                 )
                               )
                             | (
@@ -181,15 +182,16 @@
                               )
                             | (
                                 (?:
-                                    [-+]? (?: 0|[1-9][0-9_]*) # (base 10)
+                                    [-+]? [0-9]+ \. [0-9]+
                                 )
                               )
                             | (
-                                (?x:
-                                    [-+]? (?: [0-9] [0-9_]*)? \. [0-9.]* (?: [eE] [-+] [0-9]+)? # (base 10)
+                                (?:
+                                    [-+]? [0-9]+
                                 )
                               )
                         )
+                        (?=%|\ *,|$)
                     </string>
 				</dict>
 			</array>
