@@ -136,23 +136,23 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.miniyaml</string>
+							<string>keyword.other.miniyaml</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>constant.numeric.integer.miniyaml</string>
+							<string>variable.miniyaml</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>constant.numeric.integer.miniyaml</string>
+							<string>variable.miniyaml</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<!-- RGB(A) color hex value -->
 							<key>name</key>
-							<string>constant.numeric.numeric.miniyaml</string>
+							<string>variable.miniyaml</string>
 						</dict>
 						<key>6</key>
 						<dict>
