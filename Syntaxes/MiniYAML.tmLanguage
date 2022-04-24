@@ -150,10 +150,16 @@
 						</dict>
 						<key>5</key>
 						<dict>
+							<!-- RGB(A) color hex value -->
+							<key>name</key>
+							<string>constant.numeric.numeric.miniyaml</string>
+						</dict>
+						<key>6</key>
+						<dict>
 							<key>name</key>
 							<string>constant.numeric.integer.miniyaml</string>
 						</dict>
-						<key>6</key>
+						<key>7</key>
 						<dict>
 							<key>name</key>
 							<string>constant.numeric.float.miniyaml</string>
@@ -166,6 +172,11 @@
                             | (
                                 (?:
                                     ( [-+]? (?: 0|[1-9][0-9_]*) ) c ( 0|[1-9][0-9_]* ) # (base 10)
+                                )
+                              )
+                            | (
+                                (?:
+                                    [0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F]
                                 )
                               )
                             | (
