@@ -136,17 +136,17 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.miniyaml</string>
+							<string>variable.miniyaml</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>variable.miniyaml</string>
+							<string>constant.numeric.miniyaml</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>variable.miniyaml</string>
+							<string>constant.numeric.miniyaml</string>
 						</dict>
 						<key>5</key>
 						<dict>
