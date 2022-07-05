@@ -131,7 +131,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>constant.language.boolean.miniyaml</string>
+							<string>constant.numeric.miniyaml</string>
 						</dict>
 						<key>2</key>
 						<dict>
